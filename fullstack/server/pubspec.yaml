@@ -1,0 +1,12 @@
+name: hellotermproj
+description: A simple web server example using Dart and Shelf.
+version: 0.1.0
+environment:
+  sdk: '>=3.2.4 <4.0.0'
+
+dependencies:
+  shelf: ^1.4.1
+
+dev_dependencies:
+  dart_code_linter: ^1.1.1  
+
