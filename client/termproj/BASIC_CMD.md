@@ -126,3 +126,4 @@ support to a project.
 
 - $ flutter run -d macOS  
   - 此時應該要能看見 HelloWorld 範例跑在mac os 上，若沒有記得重開機再用一次應該就okay了。
+  - type 'r' on the same terminal view will do Hot-Reload after you change new code on main.dart  
