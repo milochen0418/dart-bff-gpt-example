@@ -64,6 +64,7 @@ support to a project.
  (base) milo@MacBook ~/git/dart-bff-gpt-example/client/termproj (main) $ 
 ```
 
+
 # 啟用相依的各種flutter裝置來執行
 
 ## 啟用 Mac OS X 開發來支持 main.dart
@@ -127,3 +128,15 @@ support to a project.
 - $ flutter run -d macOS  
   - 此時應該要能看見 HelloWorld 範例跑在mac os 上，若沒有記得重開機再用一次應該就okay了。
   - type 'r' on the same terminal view will do Hot-Reload after you change new code on main.dart  
+
+
+## 啟用 Chrome (Web) 開發來支持 main.dart
+
+- 查找裝置會發現找到 Chrome 的 device   
+$ flutter devices     
+Found 2 connected devices:
+  macOS (desktop) • macos  • darwin-arm64   • macOS 13.5 22G74 darwin-arm64
+  Chrome (web)    • chrome • web-javascript • Google Chrome 120.0.6099.234
+
+- 執行起來沒有懸念，會直接支持
+$ flutter run -d Chrome
