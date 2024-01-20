@@ -2,22 +2,22 @@
 - flutter doctor -v 
   - check environment
 - flutter emulators  
-  - list all emulators you have for iOS/android 
-- flutter devices
+  - list all emulators you have for iOS/android  
+- flutter devices  
   - 檢查真機或瀏覽器 (以下舉例)
   - $ flutter devices  
       - Found 2 connected devices:  
       macOS (desktop) • macos  • darwin-arm64   • macOS 13.5 22G74 darwin-arm64
       - Chrome (web)    • chrome • web-javascript • Google Chrome 120.0.6099.234
-- flutter emulators --launch <emulator_id>
+- flutter emulators --launch <emulator_id>  
   - launch your emulator by emulator_id  
-- flutter run -d <emulator_id>
+- flutter run -d <emulator_id>  
   - Run the flutter application on the emulator with <emulator_id>
 
 
 # Make flutter project from helloworld main.dart single file
-$ mv main.dart ./lib
-$ touch pubspec.yaml
+$ mv main.dart ./lib  
+$ touch pubspec.yaml  
 ```yaml
 name: termproj
 description: A new Flutter project.
@@ -75,12 +75,12 @@ Found 2 connected devices:
   Chrome (web)    • chrome • web-javascript • Google Chrome 120.0.6099.234
 
 - 執行它會失敗，因為你要自己啟用  
-$ flutter run -d macOS
+$ flutter run -d macOS  
 Launching lib/main.dart on macOS in debug mode...
 Exception: No macOS desktop project configured. See https://docs.flutter.dev/desktop#add-desktop-support-to-an-existing-flutter-app to learn about adding macOS
 support to a project.
 
-- 所以可以作以下2步驟來完勝
+- 所以可以作以下2步驟來完勝  
   - $ flutter config --enable-macos-desktop  
     Setting "enable-macos-desktop" value to "true".
   - $ flutter create --platforms=macos .  
@@ -125,18 +125,37 @@ support to a project.
     Got dependencies.
     Wrote 36 files.
 
-- $ flutter run -d macOS  
+- $ flutter run -d macOS   
   - 此時應該要能看見 HelloWorld 範例跑在mac os 上，若沒有記得重開機再用一次應該就okay了。
   - type 'r' on the same terminal view will do Hot-Reload after you change new code on main.dart  
 
 
-## 啟用 Chrome (Web) 開發來支持 main.dart
+## 啟用 Chrome (Web) 開發來支持 main.dart  
 
-- 查找裝置會發現找到 Chrome 的 device   
-$ flutter devices     
+- 查找裝置會發現找到 Chrome 的 device     
+$ flutter devices       
 Found 2 connected devices:
   macOS (desktop) • macos  • darwin-arm64   • macOS 13.5 22G74 darwin-arm64
   Chrome (web)    • chrome • web-javascript • Google Chrome 120.0.6099.234
 
-- 執行起來沒有懸念，會直接支持
-$ flutter run -d Chrome
+- 執行起來沒有懸念，會直接支持  
+$ flutter run -d Chrome  
+
+
+## 更多的啟用資訊
+
+- $ flutter config --list 
+  - 查看目前所有的 config 例如   
+  - All Settings:
+    enable-web: (Not set)
+    enable-linux-desktop: (Not set)
+    enable-macos-desktop: true
+    enable-windows-desktop: (Not set)
+    enable-android: (Not set)
+    enable-ios: (Not set)
+    enable-fuchsia: (Not set) (Unavailable)
+    enable-custom-devices: (Not set)
+    cli-animations: (Not set)
+    enable-native-assets: (Not set) (Unavailable)
+- $ flutter config --enable-windows-desktop   
+  - 透過這命令可以使得 enable-windows-desktop 變為 true  
