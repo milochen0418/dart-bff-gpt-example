@@ -253,10 +253,18 @@ google-services.json
 
 
 
-# flutter run macOS .gitignore
+# flutter run macOS, windows, android, ios .gitignore
 .idea/
 .metadata
 README.md
 analysis_options.yaml
-macos/
 test/
+macos/
+linux/
+windows/
+android/
+ios/
+
+
+
+# flutter run .gitignore for windows,android,ios
