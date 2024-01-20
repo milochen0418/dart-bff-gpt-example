@@ -1,4 +1,4 @@
-name: hellotermproj
+name: startserver
 description: A simple web server example using Dart and Shelf.
 version: 0.1.0
 environment:
