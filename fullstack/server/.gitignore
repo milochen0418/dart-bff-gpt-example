@@ -11,7 +11,7 @@
 *.class
 
 # Generated files
-bin/
+#bin/ # for dart run the bin/startserver.dart 
 gen/
 out/
 
